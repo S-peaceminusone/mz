@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魅族官网</title>
+    <link rel="stylesheet" href="../dist/css/index.min.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../dist/css/swiper-3.4.2.min.min.css">
+    <script src="../dist/js/jquery-1.12.4.min.min.js"></script>
+
+    <!-- Demo styles -->
+    <style>
+        .banner {
+            position: relative;
+            height: 838px;
+        }
+        
+        .banner {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        /* .swiper-container {
+            width: 100%;
+            height: 100%;
+        } */
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        
+        .swiper-slide img {
+            width: 100%;
+            height: 838px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="headerCon">
+            <div class="headerLeft"><img src="img/logo1.png" alt=""></div>
+            <div class="headerCenter">
+                <ul>
+                    <li><a href="#">手机</a></li>
+                    <li><a href="#">声学</a></li>
+                    <li><a href="#">配件</a></li>
+                    <li><a href="#">生活</a></li>
+                    <li><a href="#">Flyme</a></li>
+                    <li><a href="#">服务</a></li>
+                    <li><a href="#">专卖店</a></li>
+                    <li><a href="#">社区</a></li>
+                    <li><a href="#">企业服务</a></li>
+                    <li><a href="#">APP下载</a></li>
+                </ul>
+            </div>
+            <div class="headerRight">
+                <ul>
+                    <li><input type="button" value="" id="search"></li>
+                    <li><a href="login.html" class="login">登录</a></li>
+                    <!-- <li><input type="button" value="" id="buy"></li> -->
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <div class="banner">
+        <!-- Swiper -->
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);">
+                <div class="swiper-slide"><img src="img/banner1.jpg " alt=" "></div>
+                <div class="swiper-slide "><img src="img/banner2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/banner3.jpg " alt=" "></div>
+                <div class="swiper-slide "><img src="img/banner4.jpg" alt=""></div>
+                <div class="swiper-slide swiper-slide-prev"><img src="img/banner5.jpg" alt=""></div>
+                <div class="swiper-slide swiper-slide-active"><img src="img/banner6.jpg" alt=""></div>
+                <div class="swiper-slide swiper-slide-next"><img src="img/banner7.jpg" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="../dist/js/swiper-3.4.2.min.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                autoplay: 1000,
+                loop: true
+            });
+        </script>
+    </div>
+
+    <!-- classify -->
+    <div class="classify">
+        <div class="classifyCon">
+            <ul>
+                <li>
+                    <a href="#"><img src="img/class1.png" alt=""></a>
+                    <a href="#">
+                        <div class="class-tit">魅族开学聚会</div>
+                    </a>
+                    <a href="#">
+                        <div class="class-content">购机赠全新壳膜套餐</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/class2.png" alt="">
+                        <div class="class-tit">分享热爱 共享无忧</div>
+                        <div class="class-content">登记入口</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/class3.png" alt="">
+                        <div class="class-tit">魅族年度影像大赛</div>
+                        <div class="class-content">将生活一按成诗</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/class4.jpg" alt="">
+                        <div class="class-tit">myCycle</div>
+                        <div class="class-content">以旧换新享17系列补贴红包</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- phone -->
+    <div class="phone">
+        <div class="phone-tit">手机</div>
+        <div class="phone-img">
+            <a href="#"><img src="img/phone.jpg" alt=""><span class="phone-span"></span></a>
+        </div>
+        <div class="phoneCon">
+            <ul class="phone-big">
+                <li>
+                    <a href="#">
+                        <div class="pb-tit">魅族 17</div>
+                        <div class="pb-con">赠全新壳膜套装</div>
+                        <div class="pb-price">￥3699</div>
+                        <img src="img/p1.png" alt="">
+                        <div class="pb-circle">赠品</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="pb-tit">魅族 17 Pro</div>
+                        <div class="pb-con">赠全新壳膜套装</div>
+                        <div class="pb-price">￥4299</div>
+                        <img src="img/p2.png" alt="">
+                        <div class="pb-circle">赠品</div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="phone-small">
+                <li>
+                    <a href="#">
+                        <img src="img/p3.png" alt="">
+                        <div class="ps-tit">魅族 17 航母限定版</div>
+                        <div class="ps-con">以梦为舰 热爱起航</div>
+                        <div class="ps-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/p4.png" alt="">
+                        <div class="ps-tit">魅族 16T</div>
+                        <div class="ps-con">以梦为舰 热爱起航</div>
+                        <div class="ps-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/p5.png" alt="">
+                        <div class="ps-tit">魅族 16s Pro</div>
+                        <div class="ps-con">以梦为舰 热爱起航</div>
+                        <div class="ps-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/p6.png" alt="">
+                        <div class="ps-tit">魅族 16Xs</div>
+                        <div class="ps-con">以梦为舰 热爱起航</div>
+                        <div class="ps-price">￥1499</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- mz -->
+    <div class="mz">
+        <div class="public-tit">魅族声学</div>
+        <div class="public-img">
+            <a href="#"><img src="img/mz.jpg" alt=""><span class="public-span"></span></a>
+        </div>
+        <div class="publicCon">
+            <ul>
+                <li class="pub-bg pub-bg1">
+                    <a href="#">
+                        <div class="pub-tit">魅族 EP3C 耳机</div>
+                        <div class="pub-con">Hi-Res 认证高解析音质</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m2.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m3.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m4.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+                <li class="pub-bg pub-bg2">
+                    <a href="#">
+                        <div class="pub-tit">魅族 17 航母限定版</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m6.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m7.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m8.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+                <li class="pub-bg pub-bg3">
+                    <a href="#">
+                        <div class="pub-tit">魅族 17 航母限定版</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m10.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m11.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/m12.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- intellect -->
+    <div class="intellect">
+        <div class="public-tit">智能配件</div>
+        <div class="public-img">
+            <a href="#"><img src="img/zhineng.jpg" alt=""><span class="public-span"></span></a>
+        </div>
+        <div class="publicCon">
+            <ul>
+                <li class="pub-bg pub-bg1">
+                    <a href="#">
+                        <div class="pub-tit">魅族 EP3C 耳机</div>
+                        <div class="pub-con">Hi-Res 认证高解析音质</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z2.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z3.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z4.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+                <li class="pub-bg pub-bg2">
+                    <a href="#">
+                        <div class="pub-tit">魅族 EP3C 耳机</div>
+                        <div class="pub-con">Hi-Res 认证高解析音质</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z6.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z7.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z8.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+                <li class="pub-bg pub-bg3">
+                    <a href="#">
+                        <div class="pub-tit">魅族 EP3C 耳机</div>
+                        <div class="pub-con">Hi-Res 认证高解析音质</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z10.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z11.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/z12.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- life -->
+    <div class="life">
+        <div class="public-tit">生活周边</div>
+        <div class="public-img">
+            <a href="#"><img src="img/life.jpg" alt=""><span class="public-span"></span></a>
+        </div>
+        <div class="publicCon">
+            <ul>
+                <li class="pub-bg pub-bg1">
+                    <a href="#">
+                        <div class="pub-tit">魅族 EP3C 耳机</div>
+                        <div class="pub-con">Hi-Res 认证高解析音质</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l2.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l3.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l4.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+                <li class="pub-bg pub-bg2">
+                    <a href="#">
+                        <div class="pub-tit">魅族 EP3C 耳机</div>
+                        <div class="pub-con">Hi-Res 认证高解析音质</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l6.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l7.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l8.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+                <li class="pub-bg pub-bg3">
+                    <a href="#">
+                        <div class="pub-tit">魅族 EP3C 耳机</div>
+                        <div class="pub-con">Hi-Res 认证高解析音质</div>
+                        <div class="pub-price">￥4299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l10.png" alt="">
+                        <div class="pub-tit">魅族 16T</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1999</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l11.png" alt="">
+                        <div class="pub-tit">魅族 16s Pro</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥2699</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/l12.png" alt="">
+                        <div class="pub-tit">魅族 16Xs</div>
+                        <div class="pub-con">以梦为舰 热爱起航</div>
+                        <div class="pub-price">￥1499</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- community -->
+    <div class="community">
+        <div class="communityCon">
+            <div class="com-tit">社会热帖</div>
+            <ul>
+                <li>
+                    <a href="#"><img src="img/c1.png" alt=""></a>
+                    <div class="comCon">
+                        <a href="#"><img src="img/cc1.jpeg" alt="">franskask343k</a>
+                        <div class="con">第一感觉就是，这很魅族！不只是颜值出众，可谓是秀外慧中</div>
+                        <div class="intro">魅族 17Pro</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/c2.png" alt=""></a>
+                    <div class="comCon">
+                        <a href="#"><img src="img/cc2.jpeg" alt="">franskask343k</a>
+                        <div class="con">第一感觉就是，这很魅族！不只是颜值出众，可谓是秀外慧中</div>
+                        <div class="intro">魅族 17Pro</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/c3.png" alt=""></a>
+                    <div class="comCon">
+                        <a href="#"><img src="img/cc3.jpeg" alt="">franskask343k</a>
+                        <div class="con">第一感觉就是，这很魅族！不只是颜值出众，可谓是秀外慧中</div>
+                        <div class="intro">魅族 17Pro</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/c4.png" alt=""></a>
+                    <div class="comCon">
+                        <a href="#"><img src="img/cc4.jpeg" alt="">franskask343k</a>
+                        <div class="con">第一感觉就是，这很魅族！不只是颜值出众，可谓是秀外慧中</div>
+                        <div class="intro">魅族 17Pro</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/c5.png" alt=""></a>
+                    <div class="comCon">
+                        <a href="#"><img src="img/cc5.jpeg" alt="">franskask343k</a>
+                        <div class="con">第一感觉就是，这很魅族！不只是颜值出众，可谓是秀外慧中</div>
+                        <div class="intro">魅族 17Pro</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/c6.png" alt=""></a>
+                    <div class="comCon">
+                        <a href="#"><img src="img/cc6.jpeg" alt="">franskask343k</a>
+                        <div class="con">第一感觉就是，这很魅族！不只是颜值出众，可谓是秀外慧中</div>
+                        <div class="intro">魅族 17Pro</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/c7.png" alt=""></a>
+                    <div class="comCon">
+                        <a href="#"><img src="img/cc7.jpeg" alt="">franskask343k</a>
+                        <div class="con">第一感觉就是，这很魅族！不只是颜值出众，可谓是秀外慧中</div>
+                        <div class="intro">魅族 17Pro</div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/c8.png" alt=""></a>
+                    <div class="comCon">
+                        <a href="#"><img src="img/cc8.jpeg" alt="">franskask343k</a>
+                        <div class="con">第一感觉就是，这很魅族！不只是颜值出众，可谓是秀外慧中</div>
+                        <div class="intro">魅族 17Pro</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- fly -->
+    <div class="fly">
+        <div class="flyCon">
+            <div class="fly-tit">Flyme</div>
+            <ul>
+                <li>
+                    <a href="#"><img src="img/f1.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/f2.jpg" alt="">
+                        <div>跨越使用小障碍</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/f3.png" alt="">
+                        <div>跨越使用小障碍</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/f4.png" alt="">
+                        <div>跨越使用小障碍</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/f5.jpg" alt="">
+                        <div>跨越使用小障碍</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/f6.jpg" alt="">
+                        <div>跨越使用小障碍</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/f7.jpg" alt="">
+                        <div>跨越使用小障碍</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- video -->
+    <div class="video">
+        <div class="videoCon">
+            <div class="video-tit">精彩视频</div>
+            <ul>
+                <li>
+                    <a href="#"><img src="img/s1.jpg" alt="">
+                        <div>以梦为舰，热爱起航：魅族 17 航母限定版</div>
+                        <span><img src="img/s9.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/s2.jpg" alt="">
+                        <div>以梦为舰，热爱起航：魅族 17 航母限定版</div>
+                        <span><img src="img/s9.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/s3.jpg" alt="">
+                        <div>以梦为舰，热爱起航：魅族 17 航母限定版</div>
+                        <span><img src="img/s9.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/s4.jpg" alt="">
+                        <div>以梦为舰，热爱起航：魅族 17 航母限定版</div>
+                        <span><img src="img/s9.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/s5.jpg" alt="">
+                        <div>以梦为舰，热爱起航：魅族 17 航母限定版</div>
+                        <span><img src="img/s9.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/s6.jpg" alt="">
+                        <div>以梦为舰，热爱起航：魅族 17 航母限定版</div>
+                        <span><img src="img/s9.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/s7.jpg" alt="">
+                        <div>以梦为舰，热爱起航：魅族 17 航母限定版</div>
+                        <span><img src="img/s9.png" alt=""></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/s8.jpg" alt="">
+                        <div>以梦为舰，热爱起航：魅族 17 航母限定版</div>
+                        <span><img src="img/s9.png" alt=""></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footerCon">
+            <div class="footer-top">
+                <div class="ft-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/t1.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t2.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t3.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t4.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t5.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t6.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ft-right">
+                    <div class="time">周一至周日 8:00-20:00</div>
+                    <div class="ft-phone">400-788-3333</div>
+                    <div class="kefu"><a href="#">在线客服</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="fb-left">
+                    <ul>
+                        <li><a href="#">了解魅族</a></li> |
+                        <li><a href="#">加入我们</a></li> |
+                        <li><a href="#">联系我们</a></li> |
+                        <li><a href="#">Flyme</a></li> |
+                        <li><a href="#">魅族社区</a></li> |
+                        <li><a href="#">天猫旗舰店</a></li> |
+                        <li><a href="#">问题反馈</a></li> |
+                        <li><a href="#">线上销售授权名单公示</a></li> |
+                        <li><a href="#">出版物经营许可证</a></li> |
+                        <li><a href="#">简体中文</a></li>
+                    </ul>
+                    <div>&copy;2019 Meizu Telecom Equipment Co., Ltd. All rights reserved. 粤ICP备13003602号合字B2-20170010 营业执照法律声明粤公网安备 44049102496009 号</div>
+                </div>
+                <div class="fb-right">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/ff1.png" alt="">
+                                <div class="lianjie"><img src="img/lianjie.png" alt=""></div>
+                            </a>
+                        </li> |
+                        <li>
+                            <a href="#">
+                                <img src="img/ff2.png" alt="">
+                                <div class="lianjie wechat"><img src="img/weixin.png" alt=""></div>
+                            </a>
+                        </li> |
+                        <li>
+                            <a href="#"><img src="img/ff3.png" alt=""></a>
+                        </li> |
+                        <li>
+                            <a href="#"><img src="img/ff4.png" alt=""></a>
+                        </li> |
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

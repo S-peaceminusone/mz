@@ -1,0 +1,449 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+hr,
+ul,
+ol,
+td,
+input,
+option,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "微软雅黑";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+}
+
+header .headerCon {
+  width: 1550px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+header .headerCon .headerLeft {
+  float: left;
+  width: 156px;
+  height: 30px;
+  margin-top: 35px;
+}
+
+header .headerCon .headerLeft img {
+  width: 156px;
+  height: 30px;
+}
+
+header .headerCon .headerCenter {
+  float: left;
+  width: 955px;
+  height: 100px;
+  margin-left: 123px;
+}
+
+header .headerCon .headerCenter ul li {
+  float: left;
+  line-height: 100px;
+  margin: 0 25px;
+}
+
+header .headerCon .headerCenter ul li a {
+  color: #555556;
+  transition: all 0.3s;
+}
+
+header .headerCon .headerCenter ul li:hover {
+  cursor: pointer;
+}
+
+header .headerCon .headerCenter ul li:hover a {
+  color: #008cff;
+}
+
+header .headerCon .headerRight {
+  float: right;
+  width: 310px;
+  height: 100px;
+}
+
+header .headerCon .headerRight ul {
+  padding-top: 30px;
+}
+
+header .headerCon .headerRight ul li {
+  float: left;
+  margin-right: 6px;
+}
+
+header .headerCon .headerRight ul li #search {
+  width: 215px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+header .headerCon .headerRight ul li .login {
+  width: 40px;
+  height: 40px;
+  color: #008cff;
+  line-height: 40px;
+}
+
+header .headerCon .headerRight ul li #buy {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: url(../../dist/img/cart.png);
+  background-size: 40px;
+}
+
+footer {
+  width: 100%;
+  background-color: #fff;
+}
+
+footer .footerCon {
+  width: 1550px;
+  margin: 0 auto;
+}
+
+footer .footerCon .footer-top {
+  width: 1550px;
+  height: 178px;
+  border-bottom: 1px solid #eee;
+}
+
+footer .footerCon .footer-top .ft-left {
+  float: left;
+  width: 1140px;
+}
+
+footer .footerCon .footer-top .ft-left ul li {
+  float: left;
+  width: 190px;
+  height: 178px;
+}
+
+footer .footerCon .footer-top .ft-left ul li a {
+  color: #babbc0;
+  display: block;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer .footerCon .footer-top .ft-left ul li a img {
+  width: 45px;
+}
+
+footer .footerCon .footer-top .ft-left ul li a div {
+  margin-top: 5px;
+}
+
+footer .footerCon .footer-top .ft-right {
+  float: right;
+  width: 300px;
+}
+
+footer .footerCon .footer-top .ft-right .time {
+  margin-left: 145px;
+  color: #999999;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+footer .footerCon .footer-top .ft-right .ft-phone {
+  width: 230px;
+  color: #008cff;
+  font-size: 26px;
+  margin-top: 17px;
+  line-height: 22px;
+  margin-left: 110px;
+}
+
+footer .footerCon .footer-top .ft-right .kefu {
+  width: 110px;
+  height: 37px;
+  background-color: #008cff;
+  text-align: center;
+  line-height: 37px;
+  border-radius: 16px;
+  margin-top: 19px;
+  margin-left: 188px;
+}
+
+footer .footerCon .footer-top .ft-right .kefu a {
+  color: #fff;
+}
+
+footer .footerCon .footer-bottom {
+  width: 1550px;
+  height: 108px;
+}
+
+footer .footerCon .footer-bottom .fb-left {
+  width: 1140px;
+  float: left;
+}
+
+footer .footerCon .footer-bottom .fb-left ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #999999;
+}
+
+footer .footerCon .footer-bottom .fb-left ul li {
+  height: 64px;
+  line-height: 64px;
+}
+
+footer .footerCon .footer-bottom .fb-left ul li a {
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+}
+
+footer .footerCon .footer-bottom .fb-left div {
+  font-size: 14px;
+  color: #999;
+}
+
+footer .footerCon .footer-bottom .fb-right {
+  width: 188px;
+  float: right;
+  margin-top: 60px;
+}
+
+footer .footerCon .footer-bottom .fb-right ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #999999;
+}
+
+footer .footerCon .footer-bottom .fb-right ul li {
+  width: 23px;
+  position: relative;
+}
+
+footer .footerCon .footer-bottom .fb-right ul li a > img {
+  width: 23px;
+}
+
+footer .footerCon .footer-bottom .fb-right ul li .lianjie img {
+  position: absolute;
+  top: -220px;
+  left: -10px;
+  width: 200px;
+  display: none;
+}
+
+footer .footerCon .footer-bottom .fb-right ul li .wechat img {
+  left: -62px;
+}
+
+footer .footerCon .footer-bottom .fb-right ul li:hover .lianjie img {
+  display: block;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #efefef;
+}
+
+.header .headerCon {
+  width: 1550px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.header .headerCon .header-left {
+  float: left;
+  width: 225px;
+  height: 100px;
+  line-height: 120px;
+}
+
+.header .headerCon .header-left a {
+  float: left;
+  height: 100px;
+}
+
+.header .headerCon .header-left a img {
+  width: 160px;
+}
+
+.header .headerCon .header-center {
+  float: left;
+  width: 400px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 18px;
+  color: #999999;
+}
+
+.header .headerCon .header-center span {
+  color: #333333;
+}
+
+.header .headerCon .header-right {
+  float: right;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 100px;
+}
+
+.header .headerCon .header-right a {
+  float: left;
+  margin-left: 50px;
+  color: #666666;
+  font-size: 14px;
+}
+
+.banner {
+  width: 100%;
+  background-color: #f4f6fa;
+  padding-top: 13px;
+  padding-bottom: 600px;
+}
+
+.banner .bannerCon {
+  width: 1550px;
+  margin: 0 auto;
+}
+
+.banner .bannerCon .cartList {
+  width: 1550px;
+  height: 61px;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+  box-shadow: 5px 5px 20px #f1f1f1;
+}
+
+.banner .bannerCon .cartList .cartHead {
+  height: 61px;
+  background-color: #ffffff;
+}
+
+.banner .bannerCon .cartList .cartHead li {
+  float: left;
+  width: 250px;
+  height: 61px;
+  color: #adadad;
+  line-height: 61px;
+  text-align: center;
+}
+
+.banner .bannerCon .cartList .meizu-my {
+  width: 1450px;
+  height: 61px;
+  margin-top: 1px;
+  background-color: #fafafc;
+  font-size: 18px;
+  color: #666666;
+  line-height: 61px;
+  padding-left: 100px;
+  border-bottom: 1px solid #efefef;
+}
+
+.banner .bannerCon .cartList .meizu-my span {
+  font-size: 14px;
+  margin-left: 36px;
+  color: #8c8c8c;
+}
+
+.goodInfo {
+  width: 1530px;
+  height: 236px;
+  margin-top: 1px;
+  border-top: none;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+  padding-left: 20px;
+}
+
+.goodInfo li {
+  float: left;
+  width: 247px;
+  height: 236px;
+  font: 24px/50px "";
+  text-align: center;
+  line-height: 236px;
+  margin: 0 auto;
+}
+
+.goodInfo li input {
+  float: left;
+  width: 45px;
+  height: 35px;
+  text-align: center;
+  margin-top: 105px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.goodInfo li.num a {
+  float: left;
+  width: 30px;
+  height: 35px;
+  font: 12px/20px "";
+  text-decoration: none;
+  line-height: 35px;
+  color: #333333;
+  margin-top: 105px;
+  background-color: #fff;
+  border: 1px solid #efefef;
+}
+
+.goodInfo li.num a:first-child {
+  margin-left: 60px;
+}
+
+.goodInfo li img {
+  width: 150px;
+  height: 150px;
+  margin-top: 40px;
+  margin-right: 25px;
+  text-align: center;
+}
+
+.blank {
+  height: 50px;
+  font: 32px/50px "";
+  text-align: center;
+  border: 1px solid black;
+  border-top: none;
+  display: none;
+}

@@ -1,0 +1,245 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+hr,
+ul,
+ol,
+td,
+input,
+option,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "微软雅黑";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+header {
+  width: 100%;
+  height: 85px;
+}
+
+header .headerCon {
+  width: 1550px;
+  height: 70px;
+  margin: 0 auto;
+  line-height: 70px;
+  padding-top: 15px;
+}
+
+header .headerCon a img {
+  height: 30px;
+}
+
+.banner {
+  width: 100%;
+  height: 940px;
+  background: url(../../dist/img/login-bg.png) no-repeat top center;
+  background-size: auto 940px;
+  position: relative;
+}
+
+.banner .bannerCon {
+  width: 460px;
+  height: 650px;
+  background-color: #fff;
+  position: absolute;
+  right: 328px;
+  top: 150px;
+  box-shadow: 5px 5px 30px #f1f1f1;
+}
+
+.banner .bannerCon .ban-tit {
+  margin-top: 90px;
+  font-size: 22px;
+  color: #387aff;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.banner .bannerCon .box {
+  width: 380px;
+  margin-left: 40px;
+}
+
+.banner .bannerCon .box #uname {
+  width: 250px;
+  height: 60px;
+  float: right;
+  border-radius: 3px;
+  border: 1px solid #909090;
+}
+
+.banner .bannerCon .box #upwd {
+  width: 250px;
+  height: 60px;
+  float: right;
+  border-radius: 3px;
+  border: 1px solid #909090;
+}
+
+.banner .bannerCon .box #sub {
+  width: 380px;
+  height: 60px;
+  float: right;
+  border-radius: 3px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #387aff;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.banner .bannerCon .box #go {
+  border: 0;
+  background-color: #fff;
+  color: #387aff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.banner .bannerCon .name {
+  font-size: 18px;
+  color: #999;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+.banner .bannerCon .pwd {
+  font-size: 18px;
+  color: #999;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+.banner .bannerCon .radio {
+  color: #999;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 18px;
+}
+
+.banner .bannerCon .radio #radio {
+  margin-right: 5px;
+}
+
+.banner .bannerCon .radio span {
+  color: #387aff;
+}
+
+footer {
+  width: 100%;
+  height: 170px;
+}
+
+footer .footerCon {
+  width: 1550px;
+  height: 170px;
+  margin: 0 auto;
+}
+
+footer .footerCon .footer-top {
+  width: 1550px;
+  height: 110px;
+  font-size: 18px;
+}
+
+footer .footerCon .footer-top .ft-left {
+  float: left;
+  width: 600px;
+  height: 110px;
+}
+
+footer .footerCon .footer-top .ft-left ul {
+  height: 110px;
+  line-height: 110px;
+}
+
+footer .footerCon .footer-top .ft-left ul li {
+  float: left;
+  margin-right: 10px;
+}
+
+footer .footerCon .footer-top .ft-left ul li a {
+  font-size: 18px;
+  color: #333;
+}
+
+footer .footerCon .footer-top .ft-center {
+  float: left;
+  width: 320px;
+  height: 110px;
+  line-height: 110px;
+}
+
+footer .footerCon .footer-top .ft-center div {
+  float: right;
+  width: 80px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+footer .footerCon .footer-top .ft-center div a {
+  color: #fff;
+  background-color: #387aff;
+}
+
+footer .footerCon .footer-top .ft-right {
+  float: right;
+  width: 550px;
+  height: 70px;
+  padding-top: 40px;
+}
+
+footer .footerCon .footer-top .ft-right ul {
+  margin-right: 80px;
+}
+
+footer .footerCon .footer-top .ft-right ul li {
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+footer .footerCon .footer-top .ft-right ul li a {
+  width: 40px;
+}
+
+footer .footerCon .footer-top .ft-right ul li a img {
+  width: 40px;
+}
+
+footer .footerCon .footer-bottom {
+  width: 1550px;
+  height: 60px;
+  color: #7f7f7f;
+  font-size: 14pxx;
+}

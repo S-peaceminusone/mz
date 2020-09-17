@@ -1,0 +1,245 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+hr,
+ul,
+ol,
+td,
+input,
+option,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "微软雅黑";
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+// header
+header {
+    width: 100%;
+    height: 100px;
+    .headerCon {
+        width: 1550px;
+        height: 100px;
+        margin: 0 auto;
+        .headerLeft {
+            float: left;
+            width: 156px;
+            height: 30px;
+            margin-top: 35px;
+            img {
+                width: 156px;
+                height: 30px;
+            }
+        }
+        .headerCenter {
+            float: left;
+            width: 955px;
+            height: 100px;
+            margin-left: 123px;
+            ul li {
+                float: left;
+                line-height: 100px;
+                margin: 0 25px;
+                a {
+                    color: #555556;
+                    transition: all 0.3s;
+                    // .secondNav {
+                    //     width: 100%;
+                    //     height: 300px;
+                    //     background-color: #fff;
+                    //     img {
+                    //         width: 100px;
+                    //     }
+                    // }
+                }
+            }
+            ul li:hover {
+                cursor: pointer;
+            }
+            ul li:hover a {
+                color: #008cff;
+            }
+        }
+        .headerRight {
+            float: right;
+            width: 310px;
+            height: 100px;
+            ul {
+                padding-top: 30px;
+                li {
+                    float: left;
+                    margin-right: 6px;
+                    #search {
+                        width: 215px;
+                        height: 40px;
+                        border: 1px solid #d9d9d9;
+                        border-radius: 20px;
+                        background-color: #fff;
+                    }
+                    .login {
+                        width: 40px;
+                        height: 40px;
+                        color: #008cff;
+                        line-height: 40px;
+                    }
+                    #buy {
+                        width: 40px;
+                        height: 40px;
+                        border: 0;
+                        background: url(../../dist/img/cart.png);
+                        background-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    width: 100%;
+    background-color: #fff;
+    .footerCon {
+        width: 1550px;
+        margin: 0 auto;
+        .footer-top {
+            width: 1550px;
+            height: 178px;
+            border-bottom: 1px solid #eee;
+            .ft-left {
+                float: left;
+                width: 1140px;
+                ul li {
+                    float: left;
+                    width: 190px;
+                    height: 178px;
+                    a {
+                        color: #babbc0;
+                        display: block;
+                        margin-top: 60px;
+                        text-align: center;
+                        img {
+                            width: 45px;
+                        }
+                        div {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+            .ft-right {
+                float: right;
+                width: 300px;
+                .time {
+                    margin-left: 145px;
+                    color: #999999;
+                    font-size: 14px;
+                    margin-top: 40px;
+                }
+                .ft-phone {
+                    width: 230px;
+                    color: #008cff;
+                    font-size: 26px;
+                    margin-top: 17px;
+                    line-height: 22px;
+                    margin-left: 110px;
+                }
+                .kefu {
+                    width: 110px;
+                    height: 37px;
+                    background-color: #008cff;
+                    text-align: center;
+                    line-height: 37px;
+                    border-radius: 16px;
+                    margin-top: 19px;
+                    margin-left: 188px;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            width: 1550px;
+            height: 108px;
+            .fb-left {
+                width: 1140px;
+                float: left;
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #999999;
+                    li {
+                        height: 64px;
+                        line-height: 64px;
+                        a {
+                            font-size: 14px;
+                            color: #999999;
+                            text-align: center;
+                        }
+                    }
+                }
+                div {
+                    font-size: 14px;
+                    color: #999;
+                }
+            }
+            .fb-right {
+                width: 188px;
+                float: right;
+                margin-top: 60px;
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #999999;
+                    li {
+                        width: 23px;
+                        position: relative;
+                        a>img {
+                            width: 23px;
+                        }
+                        .lianjie img {
+                            position: absolute;
+                            top: -220px;
+                            left: -10px;
+                            width: 200px;
+                            display: none;
+                        }
+                        .wechat img {
+                            left: -62px;
+                        }
+                    }
+                }
+                ul li:hover .lianjie img {
+                    display: block;
+                }
+            }
+        }
+    }
+}

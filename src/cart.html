@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车 - 我的购物车</title>
+    <link rel="stylesheet" href="../dist/css/cart.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="headerCon">
+            <div class="header-left">
+                <a href="#"><img src="img/logo1.png" alt=""></a>
+            </div>
+            <div class="header-center">
+                <span>购物车</span> > 确认订单 > 在线支付 > 完成
+            </div>
+            <div class="header-right">
+                <a href="login.html">登录</a>
+                <a href="registor.html">注册</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="bannerCon">
+            <div class="cartList">
+                <ul class="cartHead">
+                    <li>缩略图</li>
+                    <li>品名</li>
+                    <li>单价(元)</li>
+                    <li>数量</li>
+                    <li>小计(元)</li>
+                    <li>编辑</li>
+                </ul>
+                <div class="meizu-my">
+                    魅族 <span>已免运费</span>
+                </div>
+                <div class="blank">
+                    您的购物车空空如也~~
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footerCon">
+            <div class="footer-top">
+                <div class="ft-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/t1.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t2.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t3.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t4.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t5.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/t6.png" alt="">
+                                <div>满80免运费</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ft-right">
+                    <div class="time">周一至周日 8:00-20:00</div>
+                    <div class="ft-phone">400-788-3333</div>
+                    <div class="kefu"><a href="#">在线客服</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="fb-left">
+                    <ul>
+                        <li><a href="#">了解魅族</a></li> |
+                        <li><a href="#">加入我们</a></li> |
+                        <li><a href="#">联系我们</a></li> |
+                        <li><a href="#">Flyme</a></li> |
+                        <li><a href="#">魅族社区</a></li> |
+                        <li><a href="#">天猫旗舰店</a></li> |
+                        <li><a href="#">问题反馈</a></li> |
+                        <li><a href="#">线上销售授权名单公示</a></li> |
+                        <li><a href="#">出版物经营许可证</a></li> |
+                        <li><a href="#">简体中文</a></li>
+                    </ul>
+                    <div>&copy;2019 Meizu Telecom Equipment Co., Ltd. All rights reserved. 粤ICP备13003602号合字B2-20170010 营业执照法律声明粤公网安备 44049102496009 号</div>
+                </div>
+                <div class="fb-right">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/ff1.png" alt="">
+                                <div class="lianjie"><img src="img/lianjie.png" alt=""></div>
+                            </a>
+                        </li> |
+                        <li>
+                            <a href="#">
+                                <img src="img/ff2.png" alt="">
+                                <div class="lianjie wechat"><img src="img/weixin.png" alt=""></div>
+                            </a>
+                        </li> |
+                        <li>
+                            <a href="#"><img src="img/ff3.png" alt=""></a>
+                        </li> |
+                        <li>
+                            <a href="#"><img src="img/ff4.png" alt=""></a>
+                        </li> |
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script src="../dist/js/jquery-1.12.4.min.min.js"></script>
+    <script src="../dist/js/jquery.cookie.min.js"></script>
+    <script src="../dist/js/public.min.js"></script>
+    <script>
+        //获取cookie
+        let cookie_str = $.cookie('carts') ? $.cookie('carts') : '';
+        if (!cookie_str) {
+            $('.blank').css('display', 'block');
+        } else {
+            //转为对象
+            let cookie_obj = $toObj(cookie_str);
+            //遍历对象
+            for (let key in cookie_obj) {
+                let good = cookie_obj[key];
+                $('.cartList').append(`
+                <ul class="goodInfo" data-good-id="${key}">
+                    <li><img src="${good.src}" /></li>
+                    <li>${good.name}</li>
+                    <li>${good.price}</li>
+                    <li class="num">
+                        <a href="javascript:;" class="minus">-</a>
+                        <input type="text" name="" id="" value="${good.num}" />
+                        <a href="javascript:;" class="plus">+</a>
+                    </li>
+                    <li class="total">${good.price * good.num}</li>
+                    <li><a href="javascript:;" class="del">删除</a></li>
+                </ul>
+                
+                `)
+            }
+            //减号
+            let $minus = $('.minus');
+            $minus.each(function(i, value) {
+                $(value).click(() => {
+
+                    //获取id
+                    let id = $(this).parents('.goodInfo').attr('data-good-id');
+                    //获取cookie
+                    let cookie_str = $.cookie('carts') ? $.cookie('carts') : '';
+                    //转对象
+                    let cookie_obj = $toObj(cookie_str);
+                    //改变数量
+                    if (cookie_obj[id].num > 0) {
+                        cookie_obj[id].num--;
+                    }
+                    //存入cookie
+                    $.cookie('carts', JSON.stringify(cookie_obj), {
+                        expires: 7,
+                        path: '/'
+                    });
+                    //修改数量文本框
+                    $(this).next().val(cookie_obj[id].num);
+                    //修改合计
+                    $(this).parent().next().text(cookie_obj[id].price * cookie_obj[id].num);
+                })
+            })
+            $('.plus').each(function(i, value) {
+                    $(value).click(() => {
+                        //当前商品的id
+                        let id = $(this).parents('.goodInfo').attr('data-good-id');
+                        //获取cookie
+                        let cookie_str = $.cookie('carts') ? $.cookie('carts') : '';
+                        //转对象
+                        let cookie_obj = $toObj(cookie_str);
+                        //数量增加
+                        cookie_obj[id].num++;
+                        //存入cookie
+                        $.cookie('carts', JSON.stringify(cookie_obj), {
+                            expires: 7,
+                            path: '/'
+                        });
+                        //修改数量文本框
+                        $(this).prev().val(cookie_obj[id].num);
+                        //合计
+                        //修改合计
+                        $(this).parent().next().text(cookie_obj[id].price * cookie_obj[id].num);
+                    })
+                })
+                //数量框
+            $('.num input').each(function(index, value) {
+                    $(value).blur(() => {
+                        //id
+                        let id = $(this).parents('.goodInfo').attr('data-good-id');
+
+                        //获取cookie
+                        let cookie_str = $.cookie('carts') ? $.cookie('carts') : '';
+                        //转对象
+                        let cookie_obj = $toObj(cookie_str);
+                        //文本框数量
+                        //非数字   正整数
+                        let num = $(this).val();
+                        if (!/^\d+$/.test(num)) {
+                            num = 0;
+                        }
+                        cookie_obj[id].num = num;
+
+                        //存入cookie
+                        $.cookie('carts', JSON.stringify(cookie_obj), {
+                            expires: 7,
+                            path: '/'
+                        });
+                        $(this).val(cookie_obj[id].num);
+                        $(this).parent().next().text((cookie_obj[id].price * cookie_obj[id].num).toFixed(2));
+                    })
+                })
+                //删除
+            $('.del').each(function(index, value) {
+                $(value).click(() => {
+                    let id = $(this).parents('.goodInfo').attr('data-good-id');
+                    //获取cookie
+                    let cookie_str = $.cookie('carts') ? $.cookie('carts') : '';
+                    //转对象
+                    let cookie_obj = $toObj(cookie_str);
+                    //删除对象中的属性
+                    delete cookie_obj[id];
+                    //存入cookie
+                    $.cookie('carts', JSON.stringify(cookie_obj), {
+                        expires: 7,
+                        path: '/'
+                    });
+                    //删除页面中的商品信息
+                    $(this).parents('.goodInfo').remove();
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>

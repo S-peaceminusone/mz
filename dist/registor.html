@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyme 账号 - 注册</title>
+    <link rel="stylesheet" href="../dist/css/registor.min.css">
+    <style>
+        .nameSpan {
+            width: 320px;
+            height: 50px;
+            font-size: 12px;
+            position: absolute;
+            left: 568px;
+            top: 172px;
+        }
+        
+        .pwdSpan {
+            width: 320px;
+            height: 50px;
+            font-size: 12px;
+            position: absolute;
+            left: 568px;
+            top: 313px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="headerCon">
+            <a href="#"><img src="img/logo2.png" alt=""></a>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="bannerCon">
+            <div class="ban-tit">注册 Flyme 账号</div>
+            <div class="box name">请输入用户名: <input type="text" value="" id="uname"><span class="nameSpan"></span></div>
+            <div class="box pwd">请输入密码: <input type="password" value="" id="upwd"><span class="pwdSpan"></span></div>
+            <!-- <div class="box radio"><input type="radio" id="radio">注册账号即表示您同意并愿意遵守<span>Flyme账号服务协议 、 法律声明</span>和<span>隐私政策</span></div> -->
+            <div class="box sub"><input type="button" name="sub" id="sub" value="立即注册" /></div>
+            <div class="box go"><input type="button" name="sub" id="go" value="登录" /></div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footerCon">
+            <div class="footer-top">
+                <div class="ft-left">
+                    <ul>
+                        <li><a href="#">关于魅族</a> &nbsp;| </li>
+                        <li><a href="#">工作机会</a> &nbsp;| </li>
+                        <li><a href="#">联系我们</a> &nbsp;| </li>
+                        <li><a href="#">法律声明</a> &nbsp;| </li>
+                        <li><a href="#">常见问题</a> &nbsp;| </li>
+                        <li><a href="#">简体中文</a></li>
+                    </ul>
+                </div>
+                <div class="ft-center">
+                    客服热线&nbsp;&nbsp;400-788-3333&nbsp;&nbsp;
+                    <div><a href="#">在线客服</a></div>
+                </div>
+                <div class="ft-right">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/space.png" alt=""></a>
+                        </li>
+
+                        <li>
+                            <a href="#"><img src="img/weixin111.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/weibo.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                ©2020 Meizu Telecom Equipment Co., Ltd. All rights reserved.备案号: 粤ICP备13003602号-4经营许可证编号: 粤B2-20130198营业执照
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script src="../dist/js/jquery-1.12.4.min.min.js"></script>
+    <script src="../dist/js/jquery.cookie.min.js"></script>
+    <script src="../dist/js/public.min.js"></script>
+    <script>
+        $('#sub').click(function() {
+            let uname = $('#uname').val();
+            let upwd = $('#upwd').val();
+            // 正则
+            // 中文2-4
+            let re_user = /^[\u4e00-\u9fa5]{2,4}$/;
+            if (!re_user.test(uname)) {
+                alert('用户名不符合规则！');
+                return;
+            }
+            //字母数字下划线 6-12
+            let re_pass = /^\w{6,12}$/;
+            if (!re_pass.test(upwd)) {
+                alert('密码不符合规则！');
+                return;
+            }
+
+            //获取cookie
+            let cookie_str = $.cookie('users') ? $.cookie('users') : '';
+            //转对象
+            let cookie_obj = $toObj(cookie_str);
+            //判断用户是否存在 
+            if (uname in cookie_obj) {
+                alert('用户已存在！');
+                return;
+            }
+            //不存在，加入对象
+            cookie_obj[uname] = upwd;
+            //存入cookie
+            $.cookie('users', JSON.stringify(cookie_obj), {
+                expires: 7,
+                path: '/'
+            });
+            alert('注册成功！');
+        })
+        $('#go').click(function() {
+            location.href = 'login.html';
+        })
+    </script>
+</body>
+
+</html>
