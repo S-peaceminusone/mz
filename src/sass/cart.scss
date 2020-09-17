@@ -158,10 +158,12 @@
 }
 
 .blank {
-    height: 50px;
-    font: 32px/50px "";
+    width: 1550px;
+    height: 61px;
+    font: 28px/61px "";
     text-align: center;
-    border: 1px solid black;
     border-top: none;
     display: none;
+    background-color: #fafafc;
+    color: #666;
 }
